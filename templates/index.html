@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Alumni.css') }}">
+
+</head>
+<body>
+    <div id="wrapper" a href="{{ url_for('index') }}">
+        <header>
+            <h1><a href="{{ url_for('index') }}"></a></h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('membership') }}">Membership Form</a></li>
+                <li><a href="{{ url_for('volunteer') }}">Volunteer Sign Up</a></li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            <div id="firstdiv">
+                <h2>Welcome to the GovState Alumni Association Page!</h2>
+                <p><b>Check out our most recent interview with GovState alumnia Dr. Debora Watson!</b></p>
+                <br>
+                <video autoplay muted loop width="90%" controls>
+                    <source src="{{ url_for('static', filename='video/watson.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div>
+                <h3>Statistics</h3>
+                <p>Over 50,000 alumni worldwide</p>
+                <p>Annual events hosted: 25+</p>
+                <p>Scholarships awarded annually: $100,000+</p>
+                <p>Volunteer hours contributed: 10,000+</p>
+
+                <h3>Stop By!</h3>
+                <p>Our Alumni Association office is located in the D Building, Room D34067. Feel free to stop by during our office hours from 9 AM to 5 PM, Monday through Friday. Take the main elevator or stair case in the Hall of Governors to the third
+                    floor, turn left, then right at the end of the hall. You will see a decorated table outside of our office. It is the only one in the hallway so you cannot miss us!</p>
+                    <br><p>We look forward to seeing you!</p>
+                    <p>All of this text is meant to be useful to you, the alumnus, and not meant to fill in space so you can see the sticky nav.</p>
+            
+            <br><h3>Check Out the 2024 DAR Highlights</h3>
+            <a href="https://www.youtube.com/watch?v=MlilQqkWWTo"><img width="60%" src="{{ url_for('static', filename='img/2024 dar.gif') }}" alt="2024 DAR Highlights" title="CLick to watch!"></a>
+            </div>
+        </div>
+
+        <footer class="footer-grid">
+        
+            <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Falumniofgovstate%2F&is_from_rle">
+                <img src="{{ url_for('static', filename='img/InstaLogo.png') }}" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/govstalumni">
+                <img src="{{ url_for('static', filename='img/FBLogo.png') }}" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/school/govstate-alumni-association/?viewAsMember=true">
+                <img src="{{ url_for('static', filename='img/LinkedInLogo.png') }}" alt="LinkedIn">
+            </a>
+            <a href="https://www.youtube.com/@AlumniAssociationatGovState">
+                <img src="{{ url_for('static', filename='img/YTLogo.png') }}" alt="YouTube">
+            </a>
+
+        </footer>
+   </div>
+</body>
+</html>

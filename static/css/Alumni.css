@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #221811;
+}
+
+header {
+    background-color: white;
+    background-image: url("../img/GSUAALogo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #231814;
+    height: 200px;
+    border-bottom: 5px solid #f97d14;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    color: black;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+nav {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #f97d14;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em;
+}
+
+nav li {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link {
+    color: black;
+}
+
+nav a:visited {
+    color: black;
+}
+
+nav a:hover {
+    color: white;
+}
+
+#wrapper {
+    background-color: #6666666b
+}
+
+#homehero {
+    height: 300px;
+}
+
+#main {
+    text-align: center;
+}
+
+#firstdiv {
+    text-align: center;
+    align-items: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.footer-grid img {
+    width: 80px;
+    height: auto;
+}
+
+@media (min-width: 600px) {
+    header {
+        text-align: center;
+        padding-left: 0;
+        grid-area: header;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav li {
+        width: auto;
+    }
+
+    #homehero {
+        height: 50vh;
+    }
+
+    #main {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    #wrapper {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "footer footer";
+        min-height: 100vh;
+    }
+
+    header {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    nav {
+        grid-area: nav;
+        background-color: #f97d14;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        font-size: larger;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #main {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #firstdiv {
+        text-align: center;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+    p {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

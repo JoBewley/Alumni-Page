@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Alumni.css') }}">
+
+</head>
+<body>
+    <div id="wrapper" a href="{{ url_for('index') }}">
+        <header>
+            <h1><a href="{{ url_for('index') }}"></a></h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('membership') }}">Membership Form</a></li>
+                <li><a href="{{ url_for('volunteer') }}">Volunteer Sign Up</a></li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            <div id="firstdiv">
+                <h2>Help Wanted!</h2>
+                <p><b>We hold over a donzen events each year, and that's only possible because of our awesome volunteers!</b></p>
+
+                <img src="{{ url_for('static', filename='img/Volunteers.png') }}" alt="Volunteering at an Event" width="75%" title="Join Us!">
+
+                <p>If you're interested in volunteering for the GovState Alumni Association, please endter your email below! We will send out regular updates regarding the events we are hosting.</p>
+            </div>
+
+            <form id="volunteerForm">
+                <label for="volunteer_email">Email Address:*</label><br>
+                <input type="email" id="volunteer_email" name="volunteer_email" required><br><br>
+
+                <input type="submit" value="Sign Up to Volunteer!">
+            </form>
+
+            <script>
+                document.getElementById("volunteerForm").addEventListener("submit", function(e) {
+                    e.preventDefault();
+
+                    alert("Thank you for signing up to volunteer!");
+
+                    this.reset();
+                });
+            </script>
+
+            <br>
+
+            <div>
+                <h3>Upcoming Events</h3>
+                <p>Keep an eye out for emails regarding the events coming up within the next two months</p>
+                <i><p>Veterans Social</p>
+                <p>Homecoming</p>
+                <p>DAR</p>
+                <p>Placeholder Event</p></i>
+            </div>
+        </div>
+
+        <footer class="footer-grid">
+        
+            <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Falumniofgovstate%2F&is_from_rle">
+                <img src="{{ url_for('static', filename='img/InstaLogo.png') }}" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/govstalumni">
+                <img src="{{ url_for('static', filename='img/FBLogo.png') }}" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/school/govstate-alumni-association/?viewAsMember=true">
+                <img src="{{ url_for('static', filename='img/LinkedInLogo.png') }}" alt="LinkedIn">
+            </a>
+            <a href="https://www.youtube.com/@AlumniAssociationatGovState">
+                <img src="{{ url_for('static', filename='img/YTLogo.png') }}" alt="YouTube">
+            </a>
+
+        </footer>
+   </div>
+</body>
+</html>
